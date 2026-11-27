@@ -87,6 +87,8 @@ body.remote-theme {
   --m3-inverse-surface: #e0e2e8;
   --m3-inverse-on-surface: #2d3135;
   --m3-shadow-ambient: rgb(0 0 0 / 30%);
+  --m3-mention-warn-container: var(--warn-container);
+  --m3-mention-warn-container-line: var(--warn-container-line);
 }
 
 /* ---------------------------------------------------------------------------
@@ -272,6 +274,17 @@ body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true'
 body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true']):hover {
   background: var(--sec-container);
   color: var(--sec-on-container);
+}
+
+/* Sable uses warning tokens for loud-mention rows; keep warnings in their contents. */
+body.remote-theme .message.mention-loud {
+  --warn-container: var(--primary-container);
+  --warn-container-line: var(--primary-main);
+}
+
+:where(body.remote-theme .message.mention-loud) > * {
+  --warn-container: var(--m3-mention-warn-container);
+  --warn-container-line: var(--m3-mention-warn-container-line);
 }
 
 /* ---------------------------------------------------------------------------
