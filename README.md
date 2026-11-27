@@ -1,6 +1,6 @@
 # Material Themes for Sable
 
-Material 3-inspired themes for Sable, with rounded controls and light and dark
+Material 3-inspired themes for [Sable](https://sable.moe/) client for [Matrix](https://matrix.org/), with rounded controls and light and dark
 variants. The themes keep Sable's existing icons and your font settings.
 
 ## Preview
