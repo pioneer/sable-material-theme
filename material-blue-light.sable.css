@@ -1,0 +1,296 @@
+/*
+@sable-theme
+id: material-blue-light
+name: Material Blue Light
+author: pioneer
+kind: light
+contrast: low
+tags: light, material, m3, blue, rounded
+fullThemeUrl: https://git.sable.moe/SableClient/themes/raw/branch/main/themes/material-blue-light.sable.css
+*/
+
+/* Palette: Material 3 tonal-spot roles from blue seed #64b5f6. Light surfaces
+   use lighter neutral container tones for a near-white appearance. Hover and
+   pressed values are 8% and 12% on-colour state layers. */
+body.remote-theme {
+  color-scheme: light;
+
+  --bg-container: #f7f9ff;
+  --bg-container-hover: #e5e7ed;
+  --bg-container-active: #dcdee4;
+  --bg-container-line: #c2c7ce;
+  --bg-on-container: #181c20;
+  --surface-container: #f1f4f9;
+  --surface-container-hover: #e0e3e8;
+  --surface-container-active: #d7dadf;
+  --surface-container-line: #c2c7ce;
+  --surface-on-container: #181c20;
+  --surface-var-container: #e6e8ee;
+  --surface-var-container-hover: #d9dbe1;
+  --surface-var-container-active: #d2d5db;
+  --surface-var-container-line: #72787e;
+  --surface-var-on-container: #42474e;
+  --primary-main: #2d628b;
+  --primary-main-hover: #3e6f94;
+  --primary-main-active: #467599;
+  --primary-main-line: #094a72;
+  --primary-on-main: #ffffff;
+  --primary-container: #cde5ff;
+  --primary-container-hover: #bdd9f4;
+  --primary-container-active: #b5d2ee;
+  --primary-container-line: #8db1d1;
+  --primary-on-container: #094a72;
+  --sec-main: #51606f;
+  --sec-main-hover: #5f6d7b;
+  --sec-main-active: #667380;
+  --sec-main-line: #394857;
+  --sec-on-main: #ffffff;
+  --sec-container: #d4e4f6;
+  --sec-container-hover: #c8d8e9;
+  --sec-container-active: #c1d1e3;
+  --sec-container-line: #a0afc0;
+  --sec-on-container: #394857;
+  --success-main: #006d43;
+  --success-main-hover: #147952;
+  --success-main-active: #1f7f5a;
+  --success-main-line: #005231;
+  --success-on-main: #ffffff;
+  --success-container: #92f7bc;
+  --success-container-hover: #86e6ae;
+  --success-container-active: #80dda7;
+  --success-container-line: #58c08c;
+  --success-on-container: #002111;
+  --warn-main: #725c00;
+  --warn-main-hover: #7d6914;
+  --warn-main-active: #83701f;
+  --warn-main-line: #564500;
+  --warn-on-main: #ffffff;
+  --warn-container: #ffe080;
+  --warn-container-hover: #edd076;
+  --warn-container-active: #e5c871;
+  --warn-container-line: #c7ab4d;
+  --warn-on-container: #231b00;
+  --crit-main: #ba1a1a;
+  --crit-main-hover: #c02c2c;
+  --crit-main-active: #c23535;
+  --crit-main-line: #93000a;
+  --crit-on-main: #ffffff;
+  --crit-container: #ffdad6;
+  --crit-container-hover: #f6c9c6;
+  --crit-container-active: #f2c0be;
+  --crit-container-line: #e38d8b;
+  --crit-on-container: #93000a;
+  --focus-ring: #51606f;
+  --shadow-color: rgb(0 0 0 / 30%);
+  --overlay: rgb(0 0 0 / 32%);
+  --m3-surface-container-high: #ebeef3;
+  --m3-inverse-surface: #2d3135;
+  --m3-inverse-on-surface: #eef1f6;
+  --m3-shadow-ambient: rgb(0 0 0 / 15%);
+}
+
+/* ---------------------------------------------------------------------------
+   Shape and elevation. --radius-inner is restated because the root value is
+   inherited as an already-computed length: 16px outer - 4px padding.
+   ------------------------------------------------------------------------ */
+body.remote-theme {
+  --radius: 12px;
+  --radius-outer: 16px;
+  --radius-inner: 12px;
+  --m3-shape-extra-large: 28px;
+  --shadow-e100: 0 1px 2px 0 var(--shadow-color), 0 1px 3px 1px var(--m3-shadow-ambient);
+  --shadow-e200: 0 1px 2px 0 var(--shadow-color), 0 2px 6px 2px var(--m3-shadow-ambient);
+  --shadow-e300: 0 1px 3px 0 var(--shadow-color), 0 4px 8px 3px var(--m3-shadow-ambient);
+  --shadow-e400: 0 2px 3px 0 var(--shadow-color), 0 6px 10px 4px var(--m3-shadow-ambient);
+  --shadow-float: var(--shadow-e300);
+  --shadow-dialog: var(--shadow-e300);
+}
+
+/* Stronger outlines when the app's high-contrast preference is on. */
+:root[data-high-contrast='on'] body.remote-theme {
+  --bg-container-line: var(--surface-var-container-line);
+  --surface-container-line: var(--surface-var-container-line);
+  --focus-ring: var(--primary-main);
+}
+
+body.remote-theme ::selection {
+  background: var(--primary-container);
+  color: var(--primary-on-container);
+}
+
+/* ---------------------------------------------------------------------------
+   Buttons: primary = filled, secondary = tonal, ghost = text, danger = error.
+   Pill-shaped labelled buttons and circular icon buttons; heights and hit
+   areas are unchanged.
+   ------------------------------------------------------------------------ */
+body.remote-theme .btn:not(.icon-button) {
+  border-radius: var(--radius-pill);
+}
+
+body.remote-theme .icon-button {
+  border-radius: var(--radii-round);
+}
+
+/* Text-button colour only in dialog/form action rows; ghost buttons elsewhere
+   sit on media and custom surfaces and keep their inherited colour. */
+body.remote-theme :is(.dialog-actions, .form-actions) > .btn-ghost:not(.icon-button) {
+  --button-on-container: var(--primary-main);
+}
+
+body.remote-theme .btn-danger {
+  --button-container: var(--crit-main);
+  --button-container-hover: var(--crit-main-hover);
+  --button-container-active: var(--crit-main-active);
+  --button-line: var(--crit-main-line);
+  --button-on-container: var(--crit-on-main);
+}
+
+/* ---------------------------------------------------------------------------
+   Outlined text fields. External labels are kept; no floating labels.
+   ------------------------------------------------------------------------ */
+body.remote-theme .form-control {
+  --form-control-container: transparent;
+  --form-control-container-line: var(--surface-var-container-line);
+
+  border-radius: var(--radii-300);
+}
+
+body.remote-theme
+  .form-control:hover:not(:focus, :disabled, [aria-invalid='true'], .form-control-error) {
+  --form-control-line: var(--bg-on-container);
+}
+
+/* ---------------------------------------------------------------------------
+   Selection controls. Only colours change; sizes and motion stay upstream.
+   ------------------------------------------------------------------------ */
+body.remote-theme .switch-root:not([data-state='checked']) {
+  background: var(--surface-var-container);
+  box-shadow: inset 0 0 0 var(--border-width-400) var(--surface-var-container-line);
+  color: var(--surface-var-container-line);
+}
+
+body.remote-theme .switch-root:not([data-disabled]) {
+  opacity: 1;
+}
+
+body.remote-theme .slider .slider-track,
+body.remote-theme .slider:hover .slider-track {
+  background: var(--sec-container);
+}
+
+body.remote-theme .slider .slider-range,
+body.remote-theme .slider:hover .slider-range {
+  background: var(--primary-main);
+}
+
+body.remote-theme .slider .slider-thumb {
+  background: var(--primary-main);
+  border-color: var(--bg-container);
+}
+
+body.remote-theme .slider:hover .slider-thumb,
+body.remote-theme .slider .slider-thumb[data-active] {
+  background: var(--primary-main-hover);
+}
+
+/* Navigation-style current items use the secondary-container indicator. */
+body.remote-theme .selection-current:is([aria-current='page'], [data-current='true']),
+body.remote-theme .selection-current:is([aria-current='page'], [data-current='true']):hover {
+  --room-icon-plate: var(--sec-container-active);
+
+  background: var(--sec-container);
+  color: var(--sec-on-container);
+}
+
+/* ---------------------------------------------------------------------------
+   Menus and tooltips.
+   ------------------------------------------------------------------------ */
+body.remote-theme .menu-surface {
+  --radius-outer: var(--radii-500);
+
+  border-color: transparent;
+}
+
+:root[data-high-contrast='on'] body.remote-theme .menu-surface {
+  border-color: var(--surface-container-line);
+}
+
+body.remote-theme .tooltip {
+  background: var(--m3-inverse-surface);
+  border-color: transparent;
+  border-radius: var(--radii-300);
+  box-shadow: none;
+  color: var(--m3-inverse-on-surface);
+}
+
+/* ---------------------------------------------------------------------------
+   Dialogs and bottom sheets: extra-large shape on surface-container-high.
+   ------------------------------------------------------------------------ */
+body.remote-theme .dialog-content-verification,
+body.remote-theme .dialog-content-sheet {
+  --ghost-hover: var(--surface-container-active);
+
+  background: var(--m3-surface-container-high);
+  border-color: transparent;
+  border-radius: var(--m3-shape-extra-large) var(--m3-shape-extra-large) 0 0;
+}
+
+@media (width >= 42rem) {
+  body.remote-theme .dialog-content-verification {
+    border-radius: var(--m3-shape-extra-large);
+  }
+}
+
+:root[data-high-contrast='on']
+  body.remote-theme
+  :is(.dialog-content-verification, .dialog-content-sheet) {
+  border-color: var(--surface-container-line);
+}
+
+body.remote-theme .bottom-sheet-pill {
+  background: var(--surface-var-on-container);
+  opacity: 0.4;
+  width: 2rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Avatars: one circular mask for images, animated overlays, initials and
+   placeholders. Unread badges and presence dots are siblings outside
+   .avatar-root, so they are not clipped.
+   ------------------------------------------------------------------------ */
+body.remote-theme .avatar-root,
+body.remote-theme .nav-tab .avatar-root,
+body.remote-theme .avatar-button {
+  border-radius: var(--radii-round);
+}
+
+body.remote-theme .nav-tab {
+  border-radius: var(--radius-pill);
+}
+
+body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true']),
+body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true']):hover {
+  background: var(--sec-container);
+  color: var(--sec-on-container);
+}
+
+/* ---------------------------------------------------------------------------
+   Room list and composer.
+   ------------------------------------------------------------------------ */
+body.remote-theme .room-row {
+  border-radius: var(--radius-pill);
+}
+
+body.remote-theme .composer {
+  background: var(--m3-surface-container-high);
+  border-radius: var(--radius-outer);
+  color: var(--surface-on-container);
+}
+
+body.remote-theme .composer:not(:has([contenteditable='true']:focus)) {
+  border-color: transparent;
+}
+
+:root[data-high-contrast='on'] body.remote-theme .composer {
+  border-color: var(--surface-var-container-line);
+}

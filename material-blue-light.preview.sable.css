@@ -1,0 +1,20 @@
+/*
+@sable-theme
+id: material-blue-light
+name: Material Blue Light
+author: pioneer
+kind: light
+contrast: low
+tags: light, material, m3, blue, rounded
+fullThemeUrl: https://git.sable.moe/SableClient/themes/raw/branch/main/themes/material-blue-light.sable.css
+*/
+
+.sable-theme-preview {
+  --sable-bg-container: #f7f9ff;
+  --sable-bg-on-container: #181c20;
+  --sable-surface-container: #f1f4f9;
+  --sable-surface-container-line: #c2c7ce;
+  --sable-surface-on-container: #181c20;
+  --sable-primary-main: #2d628b;
+  --sable-primary-on-main: #ffffff;
+}
