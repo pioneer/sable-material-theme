@@ -1,8 +1,8 @@
 # Material Themes for Sable
 
 Material 3-inspired themes with rounded controls and light and dark variants.
-Choose purple or light blue accents; the themes keep Sable's existing icons and
-your font settings.
+Choose purple, light blue or deeper blue accents; the themes keep Sable's existing
+icons and your font settings.
 
 ## Preview
 
@@ -22,6 +22,14 @@ Material Blue Dark on desktop.
 
 ![Material Blue Dark in Sable for desktop](./screenshots/desktop-blue-dark.png)
 
+Material Blue A700 Light on desktop.
+
+![Material Blue A700 Light in Sable for desktop](./screenshots/desktop-blue-a700-light.png)
+
+Material Blue A700 Dark on desktop.
+
+![Material Blue A700 Dark in Sable for desktop](./screenshots/desktop-blue-a700-dark.png)
+
 ## Choose a theme
 
 - [Material Purple Light](./material-purple-light.sable.css) — soft, light surfaces
@@ -32,6 +40,14 @@ Material Blue Dark on desktop.
   with light blue accents.
 - [Material Blue Dark](./material-blue-dark.sable.css) — dark surfaces with
   soft blue accents.
+- [Material Blue A700 Light](./material-blue-a700-light.sable.css) — near-white
+  surfaces with vibrant blue accents and filled blue outgoing bubbles.
+- [Material Blue A700 Dark](./material-blue-a700-dark.sable.css) — dark surfaces
+  with vibrant blue accents and deep blue outgoing bubbles.
+
+Blue A700 uses Material's named Blue A700 color (`#2962ff`) as the seed for a
+Material 3 vibrant scheme. Its filled outgoing bubbles apply only in the bubble
+timeline layout; the other layouts retain their existing presentation.
 
 ## Install
 

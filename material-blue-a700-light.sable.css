@@ -1,0 +1,341 @@
+/*
+@sable-theme
+id: material-blue-a700-light
+name: Material Blue A700 Light
+author: pioneer
+kind: light
+contrast: low
+tags: light, material, m3, blue, blue-a700, vibrant, rounded
+fullThemeUrl: https://git.sable.moe/SableClient/themes/raw/branch/main/themes/material-blue-a700-light.sable.css
+*/
+
+/* Material 3 vibrant scheme seeded by Material Blue A700 (#2962ff).
+   Light neutral containers use lighter tones; state layers are 8% and 12%.
+   Success and warning are harmonized custom Material tonal palettes. */
+body.remote-theme {
+  color-scheme: light;
+
+  --bg-container: #faf8ff;
+  --bg-container-hover: #e8e6ee;
+  --bg-container-active: #dfdde5;
+  --bg-container-line: #c4c5d6;
+  --bg-on-container: #191b25;
+  --surface-container: #f3f2ff;
+  --surface-container-hover: #e2e1ee;
+  --surface-container-active: #d9d8e5;
+  --surface-container-line: #c4c5d6;
+  --surface-on-container: #191b25;
+  --surface-var-container: #e7e7f5;
+  --surface-var-container-hover: #dadae8;
+  --surface-var-container-active: #d3d4e2;
+  --surface-var-container-line: #747685;
+  --surface-var-on-container: #434654;
+  --primary-main: #004ee8;
+  --primary-main-hover: #145cea;
+  --primary-main-active: #1f63eb;
+  --primary-main-line: #003ab3;
+  --primary-on-main: #ffffff;
+  --primary-container: #dce1ff;
+  --primary-container-hover: #cad4f9;
+  --primary-container-active: #c2cdf6;
+  --primary-container-line: #84a6f6;
+  --primary-on-container: #003ab3;
+  --sec-main: #5e5b7d;
+  --sec-main-hover: #6b6887;
+  --sec-main-active: #716f8d;
+  --sec-main-line: #464364;
+  --sec-on-main: #ffffff;
+  --sec-container: #e4dfff;
+  --sec-container-hover: #d7d3f3;
+  --sec-container-active: #d1ccec;
+  --sec-container-line: #aeaacb;
+  --sec-on-container: #464364;
+  --success-main: #006d43;
+  --success-main-hover: #147952;
+  --success-main-active: #1f7f5a;
+  --success-main-line: #005232;
+  --success-on-main: #ffffff;
+  --success-container: #72fcb4;
+  --success-container-hover: #69eaa7;
+  --success-container-active: #64e2a0;
+  --success-container-line: #44c387;
+  --success-on-container: #002111;
+  --warn-main: #835405;
+  --warn-main-hover: #8d6219;
+  --warn-main-active: #926923;
+  --warn-main-line: #643f00;
+  --warn-on-main: #ffffff;
+  --warn-container: #ffddb6;
+  --warn-container-hover: #eecda7;
+  --warn-container-active: #e5c5a0;
+  --warn-container-line: #cda66f;
+  --warn-on-container: #2a1800;
+  --crit-main: #ba1a1a;
+  --crit-main-hover: #c02c2c;
+  --crit-main-active: #c23535;
+  --crit-main-line: #93000a;
+  --crit-on-main: #ffffff;
+  --crit-container: #ffdad6;
+  --crit-container-hover: #f6c9c6;
+  --crit-container-active: #f2c0be;
+  --crit-container-line: #e38d8b;
+  --crit-on-container: #93000a;
+  --focus-ring: #5e5b7d;
+  --shadow-color: rgb(0 0 0 / 30%);
+  --overlay: rgb(0 0 0 / 32%);
+  --m3-surface-container-high: #ededfb;
+  --m3-inverse-surface: #2e303a;
+  --m3-inverse-on-surface: #eff0fe;
+  --m3-shadow-ambient: rgb(0 0 0 / 15%);
+  --m3-mention-warn-container: var(--warn-container);
+  --m3-mention-warn-container-line: var(--warn-container-line);
+  --m3-outgoing-container: var(--primary-main);
+  --m3-outgoing-on-container: var(--primary-on-main);
+}
+
+/* ---------------------------------------------------------------------------
+   Shape and elevation. --radius-inner is restated because the root value is
+   inherited as an already-computed length: 16px outer - 4px padding.
+   ------------------------------------------------------------------------ */
+body.remote-theme {
+  --radius: 12px;
+  --radius-outer: 16px;
+  --radius-inner: 12px;
+  --m3-shape-extra-large: 28px;
+  --shadow-e100: 0 1px 2px 0 var(--shadow-color), 0 1px 3px 1px var(--m3-shadow-ambient);
+  --shadow-e200: 0 1px 2px 0 var(--shadow-color), 0 2px 6px 2px var(--m3-shadow-ambient);
+  --shadow-e300: 0 1px 3px 0 var(--shadow-color), 0 4px 8px 3px var(--m3-shadow-ambient);
+  --shadow-e400: 0 2px 3px 0 var(--shadow-color), 0 6px 10px 4px var(--m3-shadow-ambient);
+  --shadow-float: var(--shadow-e300);
+  --shadow-dialog: var(--shadow-e300);
+}
+
+/* Stronger outlines when the app's high-contrast preference is on. */
+:root[data-high-contrast='on'] body.remote-theme {
+  --bg-container-line: var(--surface-var-container-line);
+  --surface-container-line: var(--surface-var-container-line);
+  --focus-ring: var(--primary-main);
+}
+
+body.remote-theme ::selection {
+  background: var(--primary-container);
+  color: var(--primary-on-container);
+}
+
+/* ---------------------------------------------------------------------------
+   Buttons: primary = filled, secondary = tonal, ghost = text, danger = error.
+   Pill-shaped labelled buttons and circular icon buttons; heights and hit
+   areas are unchanged.
+   ------------------------------------------------------------------------ */
+body.remote-theme .btn:not(.icon-button) {
+  border-radius: var(--radius-pill);
+}
+
+body.remote-theme .icon-button {
+  border-radius: var(--radii-round);
+}
+
+/* Text-button colour only in dialog/form action rows; ghost buttons elsewhere
+   sit on media and custom surfaces and keep their inherited colour. */
+body.remote-theme :is(.dialog-actions, .form-actions) > .btn-ghost:not(.icon-button) {
+  --button-on-container: var(--primary-main);
+}
+
+body.remote-theme .btn-danger {
+  --button-container: var(--crit-main);
+  --button-container-hover: var(--crit-main-hover);
+  --button-container-active: var(--crit-main-active);
+  --button-line: var(--crit-main-line);
+  --button-on-container: var(--crit-on-main);
+}
+
+/* ---------------------------------------------------------------------------
+   Outlined text fields. External labels are kept; no floating labels.
+   ------------------------------------------------------------------------ */
+body.remote-theme .form-control {
+  --form-control-container: transparent;
+  --form-control-container-line: var(--surface-var-container-line);
+
+  border-radius: var(--radii-300);
+}
+
+body.remote-theme
+  .form-control:hover:not(:focus, :disabled, [aria-invalid='true'], .form-control-error) {
+  --form-control-line: var(--bg-on-container);
+}
+
+/* ---------------------------------------------------------------------------
+   Selection controls. Only colours change; sizes and motion stay upstream.
+   ------------------------------------------------------------------------ */
+body.remote-theme .switch-root:not([data-state='checked']) {
+  background: var(--surface-var-container);
+  box-shadow: inset 0 0 0 var(--border-width-400) var(--surface-var-container-line);
+  color: var(--surface-var-container-line);
+}
+
+body.remote-theme .switch-root:not([data-disabled]) {
+  opacity: 1;
+}
+
+body.remote-theme .slider .slider-track,
+body.remote-theme .slider:hover .slider-track {
+  background: var(--sec-container);
+}
+
+body.remote-theme .slider .slider-range,
+body.remote-theme .slider:hover .slider-range {
+  background: var(--primary-main);
+}
+
+body.remote-theme .slider .slider-thumb {
+  background: var(--primary-main);
+  border-color: var(--bg-container);
+}
+
+body.remote-theme .slider:hover .slider-thumb,
+body.remote-theme .slider .slider-thumb[data-active] {
+  background: var(--primary-main-hover);
+}
+
+/* Navigation-style current items use the secondary-container indicator. */
+body.remote-theme .selection-current:is([aria-current='page'], [data-current='true']),
+body.remote-theme .selection-current:is([aria-current='page'], [data-current='true']):hover {
+  --room-icon-plate: var(--sec-container-active);
+
+  background: var(--sec-container);
+  color: var(--sec-on-container);
+}
+
+/* ---------------------------------------------------------------------------
+   Menus and tooltips.
+   ------------------------------------------------------------------------ */
+body.remote-theme .menu-surface {
+  --radius-outer: var(--radii-500);
+
+  border-color: transparent;
+}
+
+:root[data-high-contrast='on'] body.remote-theme .menu-surface {
+  border-color: var(--surface-container-line);
+}
+
+body.remote-theme .tooltip {
+  background: var(--m3-inverse-surface);
+  border-color: transparent;
+  border-radius: var(--radii-300);
+  box-shadow: none;
+  color: var(--m3-inverse-on-surface);
+}
+
+/* ---------------------------------------------------------------------------
+   Dialogs and bottom sheets: extra-large shape on surface-container-high.
+   ------------------------------------------------------------------------ */
+body.remote-theme .dialog-content-verification,
+body.remote-theme .dialog-content-sheet {
+  --ghost-hover: var(--surface-container-active);
+
+  background: var(--m3-surface-container-high);
+  border-color: transparent;
+  border-radius: var(--m3-shape-extra-large) var(--m3-shape-extra-large) 0 0;
+}
+
+@media (width >= 42rem) {
+  body.remote-theme .dialog-content-verification {
+    border-radius: var(--m3-shape-extra-large);
+  }
+}
+
+:root[data-high-contrast='on']
+  body.remote-theme
+  :is(.dialog-content-verification, .dialog-content-sheet) {
+  border-color: var(--surface-container-line);
+}
+
+body.remote-theme .bottom-sheet-pill {
+  background: var(--surface-var-on-container);
+  opacity: 0.4;
+  width: 2rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Avatars: one circular mask for images, animated overlays, initials and
+   placeholders. Unread badges and presence dots are siblings outside
+   .avatar-root, so they are not clipped.
+   ------------------------------------------------------------------------ */
+body.remote-theme .avatar-root,
+body.remote-theme .nav-tab .avatar-root,
+body.remote-theme .avatar-button {
+  border-radius: var(--radii-round);
+}
+
+body.remote-theme .nav-tab {
+  border-radius: var(--radius-pill);
+}
+
+body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true']),
+body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true']):hover {
+  background: var(--sec-container);
+  color: var(--sec-on-container);
+}
+
+/* Sable uses warning tokens for loud-mention rows; keep warnings in their contents. */
+body.remote-theme .message.mention-loud {
+  --warn-container: var(--primary-container);
+  --warn-container-line: var(--primary-main);
+}
+
+:where(body.remote-theme .message.mention-loud) > * {
+  --warn-container: var(--m3-mention-warn-container);
+  --warn-container-line: var(--m3-mention-warn-container-line);
+}
+
+/* ---------------------------------------------------------------------------
+   Room list and composer.
+   ------------------------------------------------------------------------ */
+body.remote-theme .room-row {
+  border-radius: var(--radius-pill);
+}
+
+body.remote-theme .composer {
+  background: var(--m3-surface-container-high);
+  border-radius: var(--radius-outer);
+  color: var(--surface-on-container);
+}
+
+body.remote-theme .composer:not(:has([contenteditable='true']:focus)) {
+  border-color: transparent;
+}
+
+:root[data-high-contrast='on'] body.remote-theme .composer {
+  border-color: var(--surface-var-container-line);
+}
+
+/* Filled outgoing bubbles; preserve tonal containers elsewhere and readable links. */
+body.remote-theme .message.layout-bubble.own :is(.content-bubble, .formatted-body) {
+  --tc-link: var(--m3-outgoing-on-container);
+
+  background: var(--m3-outgoing-container);
+  color: var(--m3-outgoing-on-container);
+}
+
+body.remote-theme .message.layout-bubble.own .content-bubble .formatted-body {
+  background: none;
+}
+
+body.remote-theme .message.layout-bubble.own .formatted-body blockquote {
+  border-inline-start-color: var(--m3-outgoing-on-container);
+}
+
+body.remote-theme
+  .message.layout-bubble.own
+  .formatted-body
+  :is(th, td, [data-mx-spoiler][aria-pressed='false']:not([data-image-spoiler])) {
+  --tc-link: var(--primary-main);
+}
+
+body.remote-theme
+  .message.layout-bubble.own
+  .formatted-body
+  [data-mx-spoiler][aria-pressed='false']:not([data-image-spoiler]) {
+  color: var(--surface-on-container);
+}

@@ -1,0 +1,20 @@
+/*
+@sable-theme
+id: material-blue-a700-dark
+name: Material Blue A700 Dark
+author: pioneer
+kind: dark
+contrast: low
+tags: dark, material, m3, blue, blue-a700, vibrant, rounded
+fullThemeUrl: https://git.sable.moe/SableClient/themes/raw/branch/main/themes/material-blue-a700-dark.sable.css
+*/
+
+.sable-theme-preview {
+  --sable-bg-container: #11131c;
+  --sable-bg-on-container: #e1e1ef;
+  --sable-surface-container: #1d1f29;
+  --sable-surface-container-line: #434654;
+  --sable-surface-on-container: #e1e1ef;
+  --sable-primary-main: #b6c4ff;
+  --sable-primary-on-main: #002780;
+}
