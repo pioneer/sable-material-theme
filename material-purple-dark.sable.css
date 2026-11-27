@@ -79,7 +79,7 @@ body.remote-theme {
   --crit-container-active: #993430;
   --crit-container-line: #b55b57;
   --crit-on-container: #f9dedc;
-  --focus-ring: #ccc2dc;
+  --focus-ring: var(--primary-main);
   --shadow-color: rgb(0 0 0 / 60%);
   --overlay: rgb(0 0 0 / 50%);
   --m3-surface-container-high: #2b2930;
@@ -271,6 +271,27 @@ body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true'
 body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true']):hover {
   background: var(--sec-container);
   color: var(--sec-on-container);
+}
+
+/* Use blue for informational UI; green remains reserved for success states. */
+:root body.remote-theme .invites .count {
+  background: var(--primary-main);
+  color: var(--primary-on-main);
+}
+
+body.remote-theme .toast-info {
+  background: var(--primary-container);
+  border-color: var(--primary-container-line);
+  color: var(--primary-on-container);
+}
+
+body.remote-theme .read-marker::before {
+  border-top-color: var(--primary-main);
+}
+
+:root body.remote-theme .read-marker:is(.read-marker) span,
+:root body.remote-theme .message .emote {
+  color: var(--primary-main);
 }
 
 /* ---------------------------------------------------------------------------

@@ -1,15 +1,16 @@
 /*
 @sable-theme
-id: material-blue-a700-light
-name: Material Blue A700 Light
+id: material-blue-vibrant-light
+name: Material Blue Vibrant Light
 author: pioneer
 kind: light
 contrast: low
-tags: light, material, m3, blue, blue-a700, vibrant, rounded
-fullThemeUrl: https://git.sable.moe/SableClient/themes/raw/branch/main/themes/material-blue-a700-light.sable.css
+tags: light, material, m3, blue, vibrant, rounded
+fullThemeUrl: https://git.sable.moe/SableClient/themes/raw/branch/main/themes/material-blue-vibrant-light.sable.css
 */
 
-/* Material 3 vibrant scheme seeded by Material Blue A700 (#2962ff).
+/* Material 3 vibrant scheme seeded by Material 2's Blue A700 swatch (#2962ff);
+   secondary roles use Tonal Spot for quieter blue-grey navigation states.
    Light neutral containers use lighter tones; state layers are 8% and 12%.
    Success and warning are harmonized custom Material tonal palettes. */
 body.remote-theme {
@@ -40,16 +41,16 @@ body.remote-theme {
   --primary-container-active: #c2cdf6;
   --primary-container-line: #84a6f6;
   --primary-on-container: #003ab3;
-  --sec-main: #5e5b7d;
-  --sec-main-hover: #6b6887;
-  --sec-main-active: #716f8d;
-  --sec-main-line: #464364;
+  --sec-main: #595d72;
+  --sec-main-hover: #666a7d;
+  --sec-main-active: #6d7083;
+  --sec-main-line: #767680;
   --sec-on-main: #ffffff;
-  --sec-container: #e4dfff;
-  --sec-container-hover: #d7d3f3;
-  --sec-container-active: #d1ccec;
-  --sec-container-line: #aeaacb;
-  --sec-on-container: #464364;
+  --sec-container: #dee1f9;
+  --sec-container-hover: #cccfe5;
+  --sec-container-active: #c3c6db;
+  --sec-container-line: #c6c5d0;
+  --sec-on-container: #424659;
   --success-main: #006d43;
   --success-main-hover: #147952;
   --success-main-active: #1f7f5a;
@@ -80,7 +81,7 @@ body.remote-theme {
   --crit-container-active: #f2c0be;
   --crit-container-line: #e38d8b;
   --crit-on-container: #93000a;
-  --focus-ring: #5e5b7d;
+  --focus-ring: var(--primary-main);
   --shadow-color: rgb(0 0 0 / 30%);
   --overlay: rgb(0 0 0 / 32%);
   --m3-surface-container-high: #ededfb;
@@ -197,6 +198,12 @@ body.remote-theme .slider .slider-thumb[data-active] {
   background: var(--primary-main-hover);
 }
 
+/* Keep unread highlights blue; success and presence indicators stay green. */
+body.remote-theme .unread-badge-highlight {
+  background: var(--primary-main);
+  color: var(--primary-on-main);
+}
+
 /* Navigation-style current items use the secondary-container indicator. */
 body.remote-theme .selection-current:is([aria-current='page'], [data-current='true']),
 body.remote-theme .selection-current:is([aria-current='page'], [data-current='true']):hover {
@@ -276,6 +283,27 @@ body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true'
 body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true']):hover {
   background: var(--sec-container);
   color: var(--sec-on-container);
+}
+
+/* Use blue for informational UI; green remains reserved for success states. */
+:root body.remote-theme .invites .count {
+  background: var(--primary-main);
+  color: var(--primary-on-main);
+}
+
+body.remote-theme .toast-info {
+  background: var(--primary-container);
+  border-color: var(--primary-container-line);
+  color: var(--primary-on-container);
+}
+
+body.remote-theme .read-marker::before {
+  border-top-color: var(--primary-main);
+}
+
+:root body.remote-theme .read-marker:is(.read-marker) span,
+:root body.remote-theme .message .emote {
+  color: var(--primary-main);
 }
 
 /* Sable uses warning tokens for loud-mention rows; keep warnings in their contents. */

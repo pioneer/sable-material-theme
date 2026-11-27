@@ -1,8 +1,7 @@
 # Material Themes for Sable
 
-Material 3-inspired themes with rounded controls and light and dark variants.
-Choose purple, light blue or deeper blue accents; the themes keep Sable's existing
-icons and your font settings.
+Material 3-inspired themes for Sable, with rounded controls and light and dark
+variants. The themes keep Sable's existing icons and your font settings.
 
 ## Preview
 
@@ -22,32 +21,26 @@ Material Blue Dark on desktop.
 
 ![Material Blue Dark in Sable for desktop](./screenshots/desktop-blue-dark.png)
 
-Material Blue A700 Light on desktop.
+Material Blue Vibrant Light on desktop.
 
-![Material Blue A700 Light in Sable for desktop](./screenshots/desktop-blue-a700-light.png)
+![Material Blue Vibrant Light in Sable for desktop](./screenshots/desktop-blue-vibrant-light.png)
 
-Material Blue A700 Dark on desktop.
+Material Blue Vibrant Dark on desktop.
 
-![Material Blue A700 Dark in Sable for desktop](./screenshots/desktop-blue-a700-dark.png)
+![Material Blue Vibrant Dark in Sable for desktop](./screenshots/desktop-blue-vibrant-dark.png)
 
 ## Choose a theme
 
-- [Material Purple Light](./material-purple-light.sable.css) — soft, light surfaces
-  with purple accents.
-- [Material Purple Dark](./material-purple-dark.sable.css) — dark surfaces with
-  lavender accents.
-- [Material Blue Light](./material-blue-light.sable.css) — near-white surfaces
-  with light blue accents.
-- [Material Blue Dark](./material-blue-dark.sable.css) — dark surfaces with
-  soft blue accents.
-- [Material Blue A700 Light](./material-blue-a700-light.sable.css) — near-white
-  surfaces with vibrant blue accents and filled blue outgoing bubbles.
-- [Material Blue A700 Dark](./material-blue-a700-dark.sable.css) — dark surfaces
-  with vibrant blue accents and deep blue outgoing bubbles.
-
-Blue A700 uses Material's named Blue A700 color (`#2962ff`) as the seed for a
-Material 3 vibrant scheme. Its filled outgoing bubbles apply only in the bubble
-timeline layout; the other layouts retain their existing presentation.
+- **Purple** — soft purple accents:
+  [Material Purple Light](./material-purple-light.sable.css) and
+  [Material Purple Dark](./material-purple-dark.sable.css).
+- **Blue** — soft blue accents:
+  [Material Blue Light](./material-blue-light.sable.css) and
+  [Material Blue Dark](./material-blue-dark.sable.css).
+- **Blue Vibrant** — vibrant blue accents, seeded by Material 2's Blue A700
+  swatch (`#2962ff`):
+  [Material Blue Vibrant Light](./material-blue-vibrant-light.sable.css) and
+  [Material Blue Vibrant Dark](./material-blue-vibrant-dark.sable.css).
 
 ## Install
 

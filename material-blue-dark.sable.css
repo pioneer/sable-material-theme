@@ -50,16 +50,16 @@ body.remote-theme {
   --sec-container-active: #4c5b6a;
   --sec-container-line: #6c7b8b;
   --sec-on-container: #d4e4f6;
-  --success-main: #76daa1;
-  --success-main-hover: #6dcd97;
-  --success-main-active: #68c792;
-  --success-main-line: #5abe88;
-  --success-on-main: #003920;
-  --success-container: #005231;
-  --success-container-hover: #0c5f3c;
-  --success-container-active: #126642;
-  --success-container-line: #2f885e;
-  --success-on-container: #92f7bc;
+  --success-main: #52df9a;
+  --success-main-hover: #4bd290;
+  --success-main-active: #48cb8b;
+  --success-main-line: #2cc280;
+  --success-on-main: #003921;
+  --success-container: #005232;
+  --success-container-hover: #09603c;
+  --success-container-active: #0e6642;
+  --success-container-line: #218a5c;
+  --success-on-container: #72fcb4;
   --warn-main: #edc20e;
   --warn-main-hover: #dfb60d;
   --warn-main-active: #d8b00c;
@@ -80,7 +80,7 @@ body.remote-theme {
   --crit-container-active: #a01a22;
   --crit-container-line: #be484a;
   --crit-on-container: #ffdad6;
-  --focus-ring: #b8c8da;
+  --focus-ring: var(--primary-main);
   --shadow-color: rgb(0 0 0 / 60%);
   --overlay: rgb(0 0 0 / 50%);
   --m3-surface-container-high: #272a2e;
@@ -274,6 +274,27 @@ body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true'
 body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true']):hover {
   background: var(--sec-container);
   color: var(--sec-on-container);
+}
+
+/* Use blue for informational UI; green remains reserved for success states. */
+:root body.remote-theme .invites .count {
+  background: var(--primary-main);
+  color: var(--primary-on-main);
+}
+
+body.remote-theme .toast-info {
+  background: var(--primary-container);
+  border-color: var(--primary-container-line);
+  color: var(--primary-on-container);
+}
+
+body.remote-theme .read-marker::before {
+  border-top-color: var(--primary-main);
+}
+
+:root body.remote-theme .read-marker:is(.read-marker) span,
+:root body.remote-theme .message .emote {
+  color: var(--primary-main);
 }
 
 /* Sable uses warning tokens for loud-mention rows; keep warnings in their contents. */

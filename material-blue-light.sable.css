@@ -53,12 +53,12 @@ body.remote-theme {
   --success-main: #006d43;
   --success-main-hover: #147952;
   --success-main-active: #1f7f5a;
-  --success-main-line: #005231;
+  --success-main-line: #005232;
   --success-on-main: #ffffff;
-  --success-container: #92f7bc;
-  --success-container-hover: #86e6ae;
-  --success-container-active: #80dda7;
-  --success-container-line: #58c08c;
+  --success-container: #72fcb4;
+  --success-container-hover: #69eaa7;
+  --success-container-active: #64e2a0;
+  --success-container-line: #44c387;
   --success-on-container: #002111;
   --warn-main: #725c00;
   --warn-main-hover: #7d6914;
@@ -80,7 +80,7 @@ body.remote-theme {
   --crit-container-active: #f2c0be;
   --crit-container-line: #e38d8b;
   --crit-on-container: #93000a;
-  --focus-ring: #51606f;
+  --focus-ring: var(--primary-main);
   --shadow-color: rgb(0 0 0 / 30%);
   --overlay: rgb(0 0 0 / 32%);
   --m3-surface-container-high: #ebeef3;
@@ -274,6 +274,27 @@ body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true'
 body.remote-theme .nav-tab-bottom:is([aria-current='page'], [data-current='true']):hover {
   background: var(--sec-container);
   color: var(--sec-on-container);
+}
+
+/* Use blue for informational UI; green remains reserved for success states. */
+:root body.remote-theme .invites .count {
+  background: var(--primary-main);
+  color: var(--primary-on-main);
+}
+
+body.remote-theme .toast-info {
+  background: var(--primary-container);
+  border-color: var(--primary-container-line);
+  color: var(--primary-on-container);
+}
+
+body.remote-theme .read-marker::before {
+  border-top-color: var(--primary-main);
+}
+
+:root body.remote-theme .read-marker:is(.read-marker) span,
+:root body.remote-theme .message .emote {
+  color: var(--primary-main);
 }
 
 /* Sable uses warning tokens for loud-mention rows; keep warnings in their contents. */
