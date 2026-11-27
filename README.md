@@ -3,6 +3,16 @@
 A Material 3-inspired theme with purple accents, rounded controls, and light and
 dark variants. It keeps Sable's existing icons and your font settings.
 
+## Preview
+
+Material Purple Light on desktop.
+
+![Material Purple Light in Sable for desktop](./screenshots/desktop-light.png)
+
+Material Purple Dark on desktop.
+
+![Material Purple Dark in Sable for desktop](./screenshots/desktop-dark.png)
+
 ## Choose a theme
 
 - [Material Purple Light](./material-purple-light.sable.css) — soft, light surfaces
