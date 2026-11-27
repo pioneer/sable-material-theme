@@ -41,6 +41,8 @@ Material Blue Vibrant Dark on desktop.
   swatch (`#2962ff`):
   [Material Blue Vibrant Light](./material-blue-vibrant-light.sable.css) and
   [Material Blue Vibrant Dark](./material-blue-vibrant-dark.sable.css).
+  It keeps the cobalt accents while using cool blue-grey surfaces and selection
+  states from the Blue palette.
 
 ## Install
 

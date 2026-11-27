@@ -10,11 +10,11 @@ fullThemeUrl: https://git.sable.moe/SableClient/themes/raw/branch/main/themes/ma
 */
 
 .sable-theme-preview {
-  --sable-bg-container: #11131c;
-  --sable-bg-on-container: #e1e1ef;
-  --sable-surface-container: #1d1f29;
-  --sable-surface-container-line: #434654;
-  --sable-surface-on-container: #e1e1ef;
+  --sable-bg-container: #101418;
+  --sable-bg-on-container: #e0e2e8;
+  --sable-surface-container: #1c2024;
+  --sable-surface-container-line: #42474e;
+  --sable-surface-on-container: #e0e2e8;
   --sable-primary-main: #b6c4ff;
   --sable-primary-on-main: #002780;
 }
