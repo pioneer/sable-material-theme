@@ -1,0 +1,20 @@
+/*
+@sable-theme
+id: material-purple-dark
+name: Material Purple Dark
+author: pioneer
+kind: dark
+contrast: low
+tags: dark, material, m3, purple, rounded
+fullThemeUrl: https://git.sable.moe/SableClient/themes/raw/branch/main/themes/material-purple-dark.sable.css
+*/
+
+.sable-theme-preview {
+  --sable-bg-container: #141218;
+  --sable-bg-on-container: #e6e0e9;
+  --sable-surface-container: #211f26;
+  --sable-surface-container-line: #49454f;
+  --sable-surface-on-container: #e6e0e9;
+  --sable-primary-main: #d0bcff;
+  --sable-primary-on-main: #381e72;
+}

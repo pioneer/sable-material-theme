@@ -1,0 +1,20 @@
+/*
+@sable-theme
+id: material-purple-light
+name: Material Purple Light
+author: pioneer
+kind: light
+contrast: low
+tags: light, material, m3, purple, rounded
+fullThemeUrl: https://git.sable.moe/SableClient/themes/raw/branch/main/themes/material-purple-light.sable.css
+*/
+
+.sable-theme-preview {
+  --sable-bg-container: #fef7ff;
+  --sable-bg-on-container: #1d1b20;
+  --sable-surface-container: #f3edf7;
+  --sable-surface-container-line: #cac4d0;
+  --sable-surface-on-container: #1d1b20;
+  --sable-primary-main: #6750a4;
+  --sable-primary-on-main: #ffffff;
+}
